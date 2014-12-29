@@ -11,20 +11,11 @@ $con = Connection::getInstance();
 
 while (true) {
 	//echo $con->getDataConnection();
-	$string = $con->getMessage();
-	if(($string[strlen($string)-2] == ">") &&  ($string[0] == "<"))
-	{
-		$con->sendMessage($string);
-/*		
-		$fp =fopen("/dev/ttyACM0", "w");
-	//	sleep(2);
-		fwrite($fp, $string);
-		fclose($fp);
-*/
 	//echo $string;
-	//echo 
-	//$con->getData();
-	}
+	echo $con->getData();
+    usleep(100000);
+	//sleep(1);
+
 }
 
 
